@@ -1,6 +1,21 @@
 import { createElement, useState } from 'react'
 import ChallengeList from './challengeList'
 
+const challenges = [
+  {
+    id: 'a',
+    title: 'Challenge A'
+  },
+  {
+    id: 'b',
+    title: 'Challenge B'
+  },
+  {
+    id: 'c',
+    title: 'Challenge C'
+  },
+];
+
 function App() {
   // return (
   //   createElement('div', { className: 'foo'},
@@ -8,7 +23,7 @@ function App() {
   //     createElement('button', {}, 'B'),
   //     createElement('button', {}, 'All'),
   //     createElement('p', {}, 'Showing 3'),
-  //     createElement(ChallengeList, {}),
+  //     createElement(ChallengeList, { challenges: challenges }),
   //     )
   //   )
 
@@ -19,7 +34,7 @@ function App() {
       <button>Only B</button>
       <button>All</button>
       <p>Showing 3</p>
-      <ChallengeList/>
+      <ChallengeList challenges={challenges}/>
     </div>
   );
 }
