@@ -1,4 +1,5 @@
 import { createElement, useState } from 'react'
+import ChallengeList from './challengeList'
 
 function App() {
   return (
@@ -7,13 +8,9 @@ function App() {
       createElement('button', {}, 'B'),
       createElement('button', {}, 'All'),
       createElement('p', {}, 'Showing 3'),
-      createElement('ul', {},
-        createElement('li', {}, 'Challenge A'),
-        createElement('li', {}, 'Challenge B'),
-        createElement('li', {}, 'Challenge C'),
+      createElement(ChallengeList, {}),
       )
     )
-  )
 }
 
 export default App
